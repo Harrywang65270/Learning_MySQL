@@ -15,4 +15,25 @@ mysql can used as a simple calculator
 
 SELECT SIN(PI()/4),(4+1)*5;
 
+can use \c to stop the query
+(in case that i input something wrong)
 
+CREATING AND SELECTING A DATABASE
+
+(Create a database)
+CREATE DATABASE menagerie
+
+(Select a database)
+USE menagerie
+
+Alternatively:
+
+shell> mysql -h host -u user -p menagerie
+Enter password: ********
+
+And You can see at any time which database is currently selected using SELECT DATABASE().
+
+Use a CREATE TABELE to specify the layout of the table 
+
+mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+    -> species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
