@@ -1,1 +1,1 @@
-# Learning_MySQL
+# This is some notes when I am learning MySQL.
