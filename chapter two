@@ -1,1 +1,27 @@
+USE menagerie
+SHOW TABLES
+
+# create a table
+
+<mysql> CREATE TABLE pet (name VARCHAR(20),OWNER VARCHAR(20),
+    -> species VARCHAR(20),sex CHAR(1), birth DATE, death DATE);
+    
+# load data
+
+<mysql> load data local infile '/Users/admin/Desktop/pet.txt' into table pet;
+Query OK, 4 rows affected, 4 warnings (0.00 sec)
+
+# insert data 
+
+<mysql> insert into pet
+    -> values('Puffball','Diane','hamster','f','1993-03-30',NULL);
+    
+    
+# show data
+
+select * from pet;
+
+# update data 
+
+<mysql> update pet set birth = '1993-03-01' where owner = 'Gwen';
 
