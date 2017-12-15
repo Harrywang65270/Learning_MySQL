@@ -25,3 +25,21 @@ select * from pet;
 
 <mysql> update pet set birth = '1993-03-01' where owner = 'Gwen';
 
+
+
+Selecting all data
+
+Selecting particular rows
+
+Selecting particular columns
+
+Sortign Rows
+
+Date Calculations
+
+<mysql> select name, birth, CURDATE(),
+    -> TIMESTAMPDIFF(YEAR,birth,CURDATE()) AS age
+    -> from pet;
+
+
+Working with NULL Values
