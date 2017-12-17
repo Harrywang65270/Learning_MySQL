@@ -1,0 +1,20 @@
+Using Python to control MySql
+
+we need to create a user first:
+
+https://dev.mysql.com/doc/refman/5.7/en/adding-users.html
+
+There are different types of users:
+
+mysql> CREATE USER 'finley'@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'finley'@'localhost'
+    ->     WITH GRANT OPTION;
+mysql> CREATE USER 'finley'@'%' IDENTIFIED BY 'password';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'finley'@'%'
+    ->     WITH GRANT OPTION;
+mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT RELOAD,PROCESS ON *.* TO 'admin'@'localhost';
+mysql> CREATE USER 'dummy'@'localhost';
+
+SELECT User FROM mysql.user;  %%% to check whether we have set up the user successfully
+
