@@ -18,3 +18,15 @@ mysql> CREATE USER 'dummy'@'localhost';
 
 SELECT User FROM mysql.user;  %%% to check whether we have set up the user successfully
 
+
+
+
+
+How to use batch mode
+
+first we need to edit the file .sql
+then we input the command in the window shown below:
+
+/usr/local/mysql/bin/mysql -u root -p text < /Users/admin/Desktop/MySQL/my_textfile.sql
+
+Then the commands in the .sql will be executed!
